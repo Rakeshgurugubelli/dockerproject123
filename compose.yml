@@ -1,0 +1,26 @@
+version: '3'
+services:
+  movies:
+    image: rakesh2310/moviesimagepaytm
+    ports:
+       -  "91:80"
+    deploy:
+       replicas: 3
+  train:
+    image: rakesh2310/trainimagepaytm
+    ports:
+       -  "92:80"
+    deploy:
+       replicas: 3
+   dth:
+    image: rakesh2310/dthimagepaytm
+    ports:
+       -  "93:80"
+    deploy:
+       replicas: 3
+    movies:
+    image: rakesh2310/rechargeimagepaytm
+    ports:
+       -  "94:80"
+    deploy:
+       replicas: 3
